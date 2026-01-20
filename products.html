@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Turf - Products & Services</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    
+    <!-- Our New Centralized Files -->
+    <link rel="stylesheet" href="style.css">
+    <script src="layout.js" defer></script>
+</head>
+
+<body data-page="products.html" data-3d-enabled="true" class="bg-[#05080f] text-white">
+
+    <!-- This div is the target for the Three.js canvas -->
+    <div id="three-container"></div>
+
+    <!-- This div will be filled by layout.js -->
+    <div id="header-container"></div>
+
+    <!-- Main Page Content -->
+    <main class="relative z-10 py-24 sm:py-32 px-4">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Title -->
+            <div class="text-center mb-16 reveal-hidden">
+                <h1 class="text-6xl font-black mb-3 tracking-tighter">
+                    The <span class="text-gradient-primary">Ecosystem</span>
+                </h1>
+                <p id="subtitle" class="text-gray-400 text-xl max-w-2xl mx-auto">
+                    Explore high-value digital and physical solutions from across the Tech Turf network.
+                </p>
+            </div>
+
+            <!-- Product Categories -->
+            <section class="mb-20">
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Digital Products (Trend Hive) -->
+                    <a href="shopping.html" class="tilt-3d transition-link spotlight-group glass-card p-8 reveal-hidden hover:scale-[1.01] transition-all duration-300" style="--spotlight-color: 147, 51, 234;">
+                        <div class="icon-container w-16 h-16 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center mb-6">
+                            <i data-lucide="zap" class="w-8 h-8 text-purple-400"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-3 text-white">Digital & SaaS</h3>
+                        <p class="text-gray-400 mb-6">Cutting-edge software, analytics platforms, and cloud-native solutions for modern businesses.</p>
+                        <span class="text-purple-400 font-medium flex items-center">
+                            View Software <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </span>
+                    </a>
+
+                    <!-- Physical Products (Quinta) -->
+                    <a href="quinta.html" class="tilt-3d transition-link spotlight-group glass-card p-8 reveal-hidden hover:scale-[1.01] transition-all duration-300" style="--spotlight-color: 59, 130, 246; transition-delay: 0.1s;">
+                        <div class="icon-container w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mb-6">
+                            <i data-lucide="rocket" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-3 text-white">Aerospace & Hardware</h3>
+                        <p class="text-gray-400 mb-6">Propulsion systems, sensor technology, and bespoke industrial hardware from Quinta.</p>
+                        <span class="text-blue-400 font-medium flex items-center">
+                            Explore Systems <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </span>
+                    </a>
+
+                    <!-- Services (Click Sphere) -->
+                    <a href="contact.html" class="tilt-3d transition-link spotlight-group glass-card p-8 reveal-hidden hover:scale-[1.01] transition-all duration-300" style="--spotlight-color: 20, 184, 166; transition-delay: 0.2s;">
+                        <div class="icon-container w-16 h-16 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="w-8 h-8 text-teal-400"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-3 text-white">Consulting & Projects</h3>
+                        <p class="text-gray-400 mb-6">Bespoke project development, IT consulting, and strategic planning services.</p>
+                        <span class="text-teal-400 font-medium flex items-center">
+                            Start a Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- CTA Section (reused from index.html) -->
+            <section class="text-center py-20 reveal-hidden">
+                <div class="relative max-w-4xl mx-auto p-10 md:p-16 rounded-3xl overflow-hidden glass-card">
+                    <!-- Background Glow -->
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 blur-[80px]"></div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 blur-[80px]"></div>
+
+                    <div class="relative z-10">
+                        <h2 class="text-5xl md:text-6xl font-black mb-6 tracking-tight">Need a <span class="text-gradient-primary">Custom</span> Solution?</h2>
+                        <p class="text-gray-400 text-xl mb-10 max-w-2xl mx-auto">Our team excels at complex, custom development projects across all our divisions.</p>
+                        
+                        <div class="flex flex-col sm:flex-row justify-center gap-6">
+                            <a href="estimator.html" class="magnetic-btn transition-link px-12 py-5 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition-all shadow-xl shadow-white/10">
+                                Get a Free Estimate
+                            </a>
+                            <a href="contact.html" class="magnetic-btn transition-link px-12 py-5 bg-transparent border border-white/20 text-white font-bold rounded-xl hover:bg-white/5 transition-all">
+                                Speak to Sales
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- This div will be filled by layout.js -->
+    <div id="footer-container"></div>
+    
+    <script>
+        // Initialize Lucide icons on load for this page
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

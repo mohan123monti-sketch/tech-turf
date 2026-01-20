@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Turf - About Us</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    
+    <!-- Our New Centralized Files -->
+    <link rel="stylesheet" href="style.css">
+    <script src="layout.js" defer></script>
+</head>
+<!-- 
+  data-page="About" tells layout.js which nav link to highlight.
+  data-3d-enabled="true" tells layout.js to load the 3D background.
+-->
+<body data-page="About" data-3d-enabled="true">
+
+    <!-- This div is the target for the Three.js canvas -->
+    <div id="three-container"></div>
+
+    <!-- This div will be filled by layout.js -->
+    <div id="header-container"></div>
+
+    <!-- Main Page Content -->
+    <main class="relative z-10 py-24 sm:py-32 px-4">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Hero Section -->
+            <div class="text-center mb-24">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 reveal-hidden">
+                    We Are <span class="text-gradient">Tech Turf</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto reveal-hidden" style="transition-delay: 0.2s;">
+                    A collective of visionary engineers, designers, and strategists dedicated to crafting the digital frontier.
+                </p>
+            </div>
+
+            <!-- Our Mission Section -->
+            <section class="mb-24">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="glass-card p-10 order-2 md:order-1 reveal-hidden">
+                        <h2 class="text-4xl font-extrabold mb-6">Our Mission</h2>
+                        <p class="text-lg text-gray-300 mb-4">
+                            Our mission is to build digital ecosystems that are not only powerful and scalable but also intuitive and beautiful. We believe in the transformative power of technology and its ability to solve complex problems, drive growth, and create lasting value.
+                        </p>
+                        <p class="text-lg text-gray-300">
+                            We bridge the gap between ambitious ideas and market-ready reality, acting as your dedicated partner in innovation.
+                        </p>
+                    </div>
+                    <div class="text-center order-1 md:order-2 reveal-hidden" style="transition-delay: 0.2s;">
+                        <!-- Placeholder for an image or advanced icon -->
+                        <div class="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full bg-blue-600/30 flex items-center justify-center border-4 border-blue-500 shadow-2xl shadow-blue-500/30">
+                            <i data-lucide="target" class="w-32 h-32 md:w-40 md:h-40 text-blue-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Meet the Team Section -->
+            <section>
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold text-white mb-4 reveal-hidden">Meet the Core Team</h2>
+                    <p class="text-lg text-gray-400 max-w-2xl mx-auto reveal-hidden" style="transition-delay: 0.2s;">
+                        The architects and innovators behind our success.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="glass-card p-8 text-center reveal-hidden">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gray-600" src="https://placehold.co/256x256/1e293b/e5e7eb?text=Alex" alt="Team Member 1">
+                        <h3 class="text-2xl font-bold mb-1">Alex Chen</h3>
+                        <p class="text-orange-400 font-medium mb-3">CEO & Lead Architect</p>
+                        <p class="text-gray-300 text-sm">
+                            The visionary founder with a passion for scalable systems and AI-driven solutions.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="glass-card p-8 text-center reveal-hidden" style="transition-delay: 0.2s;">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gray-600" src="https://placehold.co/256x256/1e293b/e5e7eb?text=Samira" alt="Team Member 2">
+                        <h3 class="text-2xl font-bold mb-1">Samira Khan</h3>
+                        <p class="text-blue-400 font-medium mb-3">Head of Design (UX/UI)</p>
+                        <p class="text-gray-300 text-sm">
+                            The creative mind ensuring every pixel serves a purpose, crafting intuitive and beautiful user experiences.
+                        </s-p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="glass-card p-8 text-center reveal-hidden" style="transition-delay: 0.4s;">
+                        <img class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gray-600" src="https://placehold.co/256x256/1e293b/e5e7eb?text=Mike" alt="Team Member 3">
+                        <h3 class="text-2xl font-bold mb-1">Mike Thompson</h3>
+                        <p class="text-green-400 font-medium mb-3">Lead DevOps Engineer</p>
+                        <p class="text-gray-300 text-sm">
+                            The guardian of uptime and automation, ensuring our systems are robust, secure, and always online.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- This div will be filled by layout.js -->
+    <div id="footer-container"></div>
+
+    <!-- All old <style> and <script> content is gone. -->
+
+</body>
+</html>

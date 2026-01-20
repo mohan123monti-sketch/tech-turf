@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Turf - Terms of Service</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    
+    <!-- Our New Centralized Files -->
+    <link rel="stylesheet" href="style.css">
+    <script src="layout.js" defer></script>
+</head>
+<!-- 
+  data-page="TOS" is a custom name. It won't highlight in the nav,
+  but it is linked in the footer.
+  data-3d-enabled="true" tells layout.js to load the 3D background.
+-->
+<body data-page="TOS" data-3d-enabled="true">
+
+    <!-- This div is the target for the Three.js canvas -->
+    <div id="three-container"></div>
+
+    <!-- This div will be filled by layout.js -->
+    <div id="header-container"></div>
+
+    <!-- Main Page Content -->
+    <main class="relative z-10 py-24 sm:py-32 px-4">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="glass-card p-8 md:p-12 reveal-hidden">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-10 text-center">
+                    Terms of <span class="text-gradient">Service</span>
+                </h1>
+
+                <!-- Re-usable text-styling class from privacy_policy.html -->
+                <style>
+                    .legal-text h2 {
+                        font-size: 1.875rem; /* text-3xl */
+                        font-weight: 700; /* font-bold */
+                        color: #fb923c; /* orange-400 */
+                        margin-top: 2rem; /* mt-8 */
+                        margin-bottom: 1rem; /* mb-4 */
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                        padding-bottom: 0.5rem;
+                    }
+                    .legal-text h3 {
+                        font-size: 1.25rem; /* text-xl */
+                        font-weight: 600; /* font-semibold */
+                        color: #e5e7eb; /* text-gray-200 */
+                        margin-top: 1.5rem; /* mt-6 */
+                        margin-bottom: 0.5rem; /* mb-2 */
+                    }
+                    .legal-text p {
+                        font-size: 1rem; /* text-base */
+                        color: #d1d5db; /* text-gray-300 */
+                        line-height: 1.75; /* leading-relaxed */
+                        margin-bottom: 1rem; /* mb-4 */
+                    }
+                    .legal-text ul {
+                        list-style-type: disc;
+                        color: #d1d5db; /* text-gray-300 */
+                        margin-left: 1.5rem; /* ml-6 */
+                        margin-bottom: 1rem; /* mb-4 */
+                    }
+                    .legal-text li {
+                        margin-bottom: 0.5rem; /* mb-2 */
+                    }
+                    .legal-text a {
+                        color: #fb923c; /* orange-400 */
+                        text-decoration: underline;
+                    }
+                </style>
+
+                <div class="legal-text">
+                    <p><strong>Last Updated:</strong> [Current Date]</p>
+                    <p>
+                        Please read these Terms of Service ("Terms") carefully before using the Tech Turf website and services (the "Services") operated by Tech Turf ("we," "us," or "our").
+                    </p>
+
+                    <h2>1. Agreement to Terms</h2>
+                    <p>
+                        By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Services.
+                    </p>
+
+                    <h2>2. User Accounts</h2>
+                    <p>
+                        When you create an account with us (`register.html`), you must provide information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.
+                    </p>
+                    <p>
+                        You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password.
+                    </p>
+
+                    <h2>3. Use of AI Nexus</h2>
+                    <p>
+                        Our AI Nexus service (`nexus_ai.html`) is provided for informational and assistance purposes. You agree not to use the service to:
+                    </p>
+                    <ul>
+                        <li>Generate or disseminate harmful, hateful, or illegal content.</li>
+                        <li>Attempt to bypass security filters or access underlying systems.</li>
+                        <li>Impersonate any person or entity.</li>
+                    </ul>
+                    <p>
+                        We reserve the right to suspend or terminate your access to the AI Nexus for any breach of these terms.
+                    </p>
+
+                    <h2>4. Intellectual Property</h2>
+                    <p>
+                        The Service and its original content, features, and functionality are and will remain the exclusive property of Tech Turf and its licensors. Our brand and trade dress may not be used in connection with any product or service without the prior written consent of Tech Turf.
+                    </p>
+
+                    <h2>5. Limitation of Liability</h2>
+                    <p>
+                        In no event shall Tech Turf, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
+                    </p>
+
+                    <h2>6. Changes to Terms</h2>
+                    <p>
+                        We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide at least 30 days' notice prior to any new terms taking effect.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- This div will be filled by layout.js -->
+    <div id="footer-container"></div>
+
+    <!-- All old <style> and <script> content is gone. -->
+
+</body>
+</html>

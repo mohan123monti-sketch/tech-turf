@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Turf - Careers & Culture</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    
+    <!-- Our New Centralized Files -->
+    <link rel="stylesheet" href="style.css">
+    <script src="layout.js" defer></script>
+</head>
+
+<body data-page="Careers" data-3d-enabled="true" class="bg-[#05080f] text-white">
+
+    <!-- This div is the target for the Three.js canvas -->
+    <div id="three-container"></div>
+
+    <!-- This div will be filled by layout.js -->
+    <div id="header-container"></div>
+
+    <!-- Main Page Content -->
+    <main class="relative z-10 py-24 sm:py-32 px-4">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Hero -->
+            <div class="text-center mb-20 reveal-hidden">
+                <h1 class="text-7xl font-black mb-4 tracking-tighter">
+                    Join the <span class="text-gradient-primary">Mission</span>
+                </h1>
+                <p class="text-gray-400 text-2xl max-w-3xl mx-auto">
+                    We're building the future, piece by piece. Find your place on our team of engineers, designers, and innovators.
+                </p>
+                <a href="#open-roles" class="magnetic-btn transition-link inline-flex items-center mt-8 px-8 py-3 bg-orange-600 text-white font-bold rounded-full hover:bg-orange-700 transition-all">
+                    Explore Open Roles <i data-lucide="arrow-down" class="w-5 h-5 ml-3"></i>
+                </a>
+            </div>
+
+            <!-- Culture Section -->
+            <section class="mb-20">
+                <h2 class="text-4xl font-bold text-center mb-12 reveal-hidden">Our Culture</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <div class="glass-card p-6 reveal-hidden" style="transition-delay: 0.1s;">
+                        <i data-lucide="flask-conical" class="w-8 h-8 text-blue-400 mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-2">Deep Innovation</h3>
+                        <p class="text-gray-400">Time and resources dedicated to blue-sky research and experimental side projects.</p>
+                    </div>
+
+                    <div class="glass-card p-6 reveal-hidden" style="transition-delay: 0.2s;">
+                        <i data-lucide="gem" class="w-8 h-8 text-purple-400 mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-2">Global Impact</h3>
+                        <p class="text-gray-400">Work on projects that genuinely change industries, from space systems to digital identity.</p>
+                    </div>
+
+                    <div class="glass-card p-6 reveal-hidden" style="transition-delay: 0.3s;">
+                        <i data-lucide="leaf" class="w-8 h-8 text-green-400 mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-2">Sustainable Growth</h3>
+                        <p class="text-gray-400">Focus on long-term career paths, continuous learning, and work-life balance.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Open Roles -->
+            <section id="open-roles" class="pt-16">
+                <h2 class="text-4xl font-bold text-center mb-12 reveal-hidden">Current Openings</h2>
+                
+                <div class="max-w-4xl mx-auto space-y-4">
+                    
+                    <!-- Role 1 -->
+                    <a href="contact.html?role=AerospaceEngineer" class="transition-link flex justify-between items-center glass-card p-6 reveal-hidden hover:bg-white/10 transition-all">
+                        <div>
+                            <h3 class="text-xl font-bold">Aerospace Propulsion Engineer</h3>
+                            <p class="text-blue-400 text-sm">Quinta Division - Coimbatore</p>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-6 h-6 text-gray-400"></i>
+                    </a>
+
+                    <!-- Role 2 -->
+                    <a href="contact.html?role=SeniorFrontend" class="transition-link flex justify-between items-center glass-card p-6 reveal-hidden hover:bg-white/10 transition-all" style="transition-delay: 0.1s;">
+                        <div>
+                            <h3 class="text-xl font-bold">Senior Frontend Developer (React/Angular)</h3>
+                            <p class="text-purple-400 text-sm">Trend Hive Division - Remote</p>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-6 h-6 text-gray-400"></i>
+                    </a>
+
+                    <!-- Role 3 -->
+                    <a href="contact.html?role=CyberSecurityAnalyst" class="transition-link flex justify-between items-center glass-card p-6 reveal-hidden hover:bg-white/10 transition-all" style="transition-delay: 0.2s;">
+                        <div>
+                            <h3 class="text-xl font-bold">Cyber Security Analyst</h3>
+                            <p class="text-green-400 text-sm">Click Sphere Division - Chennai/Hybrid</p>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-6 h-6 text-gray-400"></i>
+                    </a>
+
+                    <p class="text-center text-gray-500 pt-10 reveal-hidden" style="transition-delay: 0.3s;">
+                        Don't see your role? Send us your CV on our <a href="contact.html" class="text-orange-400 hover:text-white transition-colors">Contact Page</a>.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- This div will be filled by layout.js -->
+    <div id="footer-container"></div>
+    
+    <script>
+        // Initialize Lucide icons on load for this page
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
