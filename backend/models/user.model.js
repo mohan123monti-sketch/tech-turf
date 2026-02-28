@@ -34,12 +34,62 @@ const userSchema = new mongoose.Schema(
             enum: ['user', 'admin', 'superadmin', 'content_manager', 'product_manager', 'support_agent'],
             default: 'user',
         },
+        googleId: {
+            type: String,
+            sparse: true,
+        },
+        facebookId: {
+            type: String,
+            sparse: true,
+        },
+        resetPasswordToken: String,
+        resetPasswordExpire: Date,
         lastLogin: {
             type: Date,
         },
         twoFactorEnabled: {
             type: Boolean,
             default: false,
+        },
+        addresses: {
+            type: [
+                {
+                    label: { type: String, default: 'Home' },
+                    address: { type: String },
+                    city: { type: String },
+                    state: { type: String },
+                    postalCode: { type: String },
+                    country: { type: String, default: 'India' },
+                    phone: { type: String },
+                    company: { type: String },
+                    gstin: { type: String },
+                    isDefault: { type: Boolean, default: false },
+                },
+            ],
+            default: [],
+        },
+        savedCart: {
+            type: [
+                {
+                    productId: { type: mongoose.Schema.Types.ObjectId, ref: 'Product' },
+                    name: { type: String },
+                    price: { type: Number },
+                    image: { type: String },
+                    qty: { type: Number, default: 1 },
+                    variant: { type: Object },
+                },
+            ],
+            default: [],
+        },
+        wishlist: {
+            type: [mongoose.Schema.Types.ObjectId],
+            ref: 'Product',
+            default: [],
+        },
+        recentlyViewed: {
+            type: [mongoose.Schema.Types.ObjectId],
+            ref: 'Product',
+            default: [],
         },
     },
     {
@@ -74,6 +124,9 @@ userSchema.pre('save', async function (next) {
 // This adds a custom method to every User document.
 // It allows us to compare a plaintext password with the hashed db password.
 userSchema.methods.matchPassword = async function (enteredPassword) {
+    if (!this.password) {
+        return false;
+    }
     return await bcrypt.compare(enteredPassword, this.password);
 };
 

@@ -5,11 +5,16 @@ const blogPostSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    slug: {
+    category: {
         type: String,
-        required: true,
-        unique: true
+        default: 'General'
     },
+    imageUrl: {
+        type: String
+    },
+    imageUrls: [{
+        type: String
+    }],
     content: {
         type: String,
         required: true
@@ -21,7 +26,7 @@ const blogPostSchema = new mongoose.Schema({
     status: {
         type: String,
         enum: ['draft', 'published', 'archived'],
-        default: 'draft'
+        default: 'published'
     },
     tags: [{
         type: String
@@ -30,7 +35,8 @@ const blogPostSchema = new mongoose.Schema({
         type: String
     },
     publishedAt: {
-        type: Date
+        type: Date,
+        default: Date.now
     }
 }, {
     timestamps: true
