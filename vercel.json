@@ -1,4 +1,5 @@
 {
+  "_comment": "Routes all traffic to frontend app folder",
   "rewrites": [
     { "source": "/src/:path*", "destination": "/frontend/src/:path*" },
     { "source": "/pages/:path*", "destination": "/frontend/pages/:path*" },
